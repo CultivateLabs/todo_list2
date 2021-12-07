@@ -1,24 +1,37 @@
-# README
+# Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Clone the repo:
+```
+git clone git@github.com:CultivateLabs/todo_list2.git
+cd todo_list2/
+```
 
-Things you may want to cover:
+- Install ruby-2.7.4 with whatever Ruby version manager you prefer
 
-* Ruby version
+- Install gems:
+```
+bundle install
+```
 
-* System dependencies
+- Install JS dependencies:
 
-* Configuration
+If you don't already have yarn installed:
+```
+npm install --global yarn
+```
 
-* Database creation
+Then:
+```
+yarn install
+```
 
-* Database initialization
+Database setup:
+```
+bin/rake db:create
+bin/rake db:migrate
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the app:
+```
+bin/rails s
+```
